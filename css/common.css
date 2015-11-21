@@ -6,7 +6,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-* { padding: 0; }
+* { padding: 0; margin: 0; }
 
 @font-face { font-family: 'Glyphicons Halflings'; src: url("../fonts/glyphicons-halflings-regular.eot"); src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon { position: relative; top: 1px; display: inline-block; font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -546,14 +546,15 @@ a { text-decoration: none; }
 #wrap ul:after { display: table; overflow: hidden; clear: both; content: ""; }
 
 #wrap { width: 100%; }
-#wrap .footer { position: fixed; bottom: 0; width: 100%; max-width: 640px; }
-#wrap .footer ul.footer-nav { background: red; *zoom: 1; }
-#wrap .footer ul.footer-nav li { float: left; width: 25%; height: 48px; border-top: 1px solid #456; background: #fff; }
-#wrap .footer ul.footer-nav li a { display: block; font-family: "Microsoft YaHei"; padding-top: 6px; color: #000; text-align: center; }
-#wrap .footer ul.footer-nav li a i { text-align: center; }
+
+.footer { position: fixed; bottom: 0; width: 100%; max-width: 640px; }
+.footer ul.footer-nav { margin: 0; background: red; *zoom: 1; }
+.footer ul.footer-nav li { float: left; width: 25%; height: 48px; border-top: 1px solid #456; background: #fff; }
+.footer ul.footer-nav li a { display: block; font-family: "Microsoft YaHei"; padding-top: 6px; color: #000; text-align: center; }
+.footer ul.footer-nav li a i { text-align: center; }
 
 #wrap .head { overflow: hidden; max-width: 620px; width: 100%; margin: 0 auto; }
-#wrap .head ul { height: 100px; max-width: 2480px; margin: 0; width: 400%; }
+#wrap .head ul { height: 100px; max-width: 2480px; margin: 10 0 0 0; width: 400%; }
 #wrap .head ul li { float: left; height: 100px; width: 25%; }
 #wrap .head ul li img { display: block; width: 100%; height: 100px; max-width: 100%; }
 
@@ -561,7 +562,7 @@ i { font-style: normal; }
 
 .text-over { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-#wrap .container { padding: 9px; }
+#wrap .container { margin-bottom: 50px; padding: 9px; }
 #wrap .container ul { margin: 0; }
 #wrap .container ul li { box-sizing: border-box; width: 100%; margin: 0 auto; border: 1px solid #456; }
 #wrap .container ul li a { display: block; margin: 0 auto; position: relative; }
@@ -581,3 +582,32 @@ i { font-style: normal; }
 #wrap .container ul li a div.detail div { position: absolute; right: 20px; height: 64px; line-height: 64px; width: 100px; top: 50%; border: 1px solid red; border-radius: 5px; margin-top: -33px; }
 #wrap .container ul li a div.detail div span { text-align: center; display: block; height: 33.3333%; line-height: 22px; }
 #wrap .container ul li a div.detail div span.tebie { background: red; color: #fff; }
+
+#detail-wrap { margin-bottom: 50px; }
+#detail-wrap .head { width: 100%; overflow: hidden; }
+#detail-wrap .head ul { width: 400%; }
+#detail-wrap .head ul li { float: left; width: 25%; }
+#detail-wrap .head ul li img { width: 100%; height: 200px; }
+#detail-wrap .detail-content > h4 { padding: 10px 10px 0  10px; font-size: 14px; margin: 10px 0 0 0; }
+#detail-wrap .detail-content > p { padding: 0 10px; color: #456; margin: 8px 0 0 0; font-size: 12px; line-height: 20px; }
+#detail-wrap .detail-content > h5 { padding: 10px 10px 0 10px; text-align: right; color: #456; font-weight: normal; font-size: 12px; }
+#detail-wrap .detail-content > span { color: red; padding: 0 10px; line-height: 20px; display: block; font-size: 12px; margin-top: 8px; }
+#detail-wrap .detail-content div.buy { padding: 0 10px; }
+#detail-wrap .detail-content div.buy ul { margin-top: 10px; margin-right: -10px; position: relative; left: -2px; }
+#detail-wrap .detail-content div.buy ul li { float: left; width: 50%; max-width: 310px; margin-right: 5px; margin-bottom: 2px; }
+#detail-wrap .detail-content div.buy ul li a { width: 100%; display: block; }
+#detail-wrap .detail-content div.buy ul li a span { display: block; height: 40px; line-height: 40px; text-align: center; background: red; color: #fff; }
+#detail-wrap .detail-content div.buy ul li a i { display: block; height: 30px; line-height: 30px; text-align: center; background: #000; color: #fff; }
+#detail-wrap .detail-content div.play { padding-top: 10px; background: #456; }
+#detail-wrap .detail-content div.play > .content { background: #fff; border-top: 1px solid red; }
+#detail-wrap .detail-content div.play > .content .title { height: 40px; line-height: 40px; }
+#detail-wrap .detail-content div.play > .content .title .title-left { text-indent: 10px; }
+#detail-wrap .detail-content div.play > .content .title .title-right { text-align: center; float: right; width: 100px; }
+#detail-wrap .detail-content div.play ul li { float: left; width: 25%; }
+#detail-wrap .detail-content div.play ul li:first-child span.left { background: red; border: none; color: #fff; }
+#detail-wrap .detail-content div.play ul li span.left { position: absolute; width: 20px; border: 2px dashed #456; border-radius: 20px; height: 20px; color: #456; text-align: center; line-height: 20px; }
+#detail-wrap .detail-content div.play ul li span.right { display: block; font-size: 14px; padding-left: 25px; }
+
+.clear:after { clear: both; display: table; overflow: hidden; content: ""; }
+
+.clear { *zoom: 1; }
